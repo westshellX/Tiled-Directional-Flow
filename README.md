@@ -1,7 +1,8 @@
                    Tiled Directional Flow
 Move source code with images from [here](https://www.rug.nl/cit/hpcv/publications/watershader/hpcv-water-29-oct-2010.zip) to github.
 And some introduction can be found on this [web](http://www.rug.nl/society-business/centre-for-information-technology/research/hpcv/publications/watershader/).
-Final result of watershader was like this.
+Final result of watershader was like this picture bellow.
+![Tiled Directional Flow](images/hpcvrock.tga)
 
  (c) 2010 frans van hoesel, university of groningen
 
