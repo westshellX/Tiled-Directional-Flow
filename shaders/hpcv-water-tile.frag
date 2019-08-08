@@ -91,7 +91,7 @@ void main (void)
 
     vec2 mytexFlowCoord = texFlowCoord * texScale;
     // ff is the factor that blends the tiles.
- 	  vec2 ff =  abs(2*(frac(mytexFlowCoord)) - 1) -0.5; 	  
+ 	vec2 ff = abs(2*(fract(mytexFlowCoord)) - 1) -0.5; 	 
     // take a third power, to make the area with more or less equal contribution
     // of more tile bigger
 	  ff = 0.5-4*ff*ff*ff;
@@ -204,7 +204,7 @@ void main (void)
     // the water (and make the water disappear when depth = 0), add some watercolor to the colormap
     // depending on the depth, and use the calculated refractdir and the depth to find the right
     // pixel in the colormap.... who knows, something for the next version
-    vec3 base = texture2D(colorMap,texColorCoord + myNormal/texScale2*0.03*transp).rgb;
+    vec3 base = texture2D(colorMap,texColorCoord + myNormal.xy/texScale2*0.03*transp).rgb;  //texture2D(colorMap,texColorCoord + myNormal/texScale2*0.03*transp).rgb;
     gl_FragColor = vec4 (mix(base,envColor,myangle*transp),1.0 );
 
 		// note that smaller waves appear to move slower than bigger waves
