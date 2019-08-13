@@ -14,10 +14,10 @@ uniform mat4 osg_ViewMatrixInverse;
 varying float myTime;
 void main(void)
 {
-	
+
     gl_Position    = ftransform();
     Normal         = normalize(gl_NormalMatrix * gl_Normal);
-  
+
     vec4 pos       = gl_ModelViewMatrix * gl_Vertex;
     EyeDir         = vec3(osg_ViewMatrixInverse*vec4(pos.xyz,0));;
 
